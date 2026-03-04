@@ -80,6 +80,7 @@ const config = {
           items: [
             { label: 'Indian Legal AI Expert', to: '/docs/domain-applications/indian-legal-ai' },
             { label: 'Citizen Safety AI', to: '/docs/domain-applications/citizen-safety-ai' },
+            { label: 'Citizen Safety Tech Spec', to: '/docs/domain-applications/citizen-safety-tech-spec' },
             { label: 'SHA-256 Sync Engine', to: '/docs/domain-ingestion/sha256-sync-engine' },
           ],
         },
