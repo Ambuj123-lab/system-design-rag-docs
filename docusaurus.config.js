@@ -101,6 +101,10 @@ const config = {
       additionalLanguages: ['python', 'bash', 'javascript', 'typescript'],
     },
   },
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 module.exports = config;
