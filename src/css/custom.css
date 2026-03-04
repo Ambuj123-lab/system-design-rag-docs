@@ -376,16 +376,44 @@
   padding: 4rem 2rem;
   border-top: 1px solid #27272A;
   background-color: #000000;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.ts-disclaimer p {
+.ts-disclaimer__toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  font-family: inherit;
+}
+
+.ts-disclaimer__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
   max-width: 700px;
-  margin: 0 auto;
+  text-align: center;
+  margin-top: 0;
+}
+
+.ts-disclaimer__content--open {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+.ts-disclaimer__content p {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #71717A;
-  font-family: var(--ifm-font-family-base);
+  color: #A1A1AA;
+  margin: 0;
+  padding: 1.5rem;
+  border: 1px dashed #27272A;
+  background-color: #09090B;
 }
 
 @media (max-width: 600px) {

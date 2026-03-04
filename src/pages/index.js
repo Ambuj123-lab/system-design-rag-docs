@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 
 export default function Home() {
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+
   return (
     <Layout
       title="Ambuj Kumar Tripathi"
@@ -75,14 +77,24 @@ export default function Home() {
         </section>
 
         <section className="ts-disclaimer">
-          <p>
-            I am not a professor, a course creator, or a consultant. I am a self-taught engineer who learned
-            everything from free tiers, open-source documentation, and first-principles thinking. This is my
-            working memory — shared openly because I wish someone had shared theirs with me.
-            <br /><br />
-            These are not landmark discoveries. Not breakthroughs. Just honest notes from someone in the
-            trenches. Use them to learn faster than I did.
-          </p>
+          <button
+            className="ts-btn-group ts-btn-group--dark ts-disclaimer__toggle"
+            onClick={() => setShowDisclaimer(!showDisclaimer)}
+          >
+            <span className="ts-btn-text">ENGINEERING DISCLAIMER</span>
+            <span className="ts-btn-icon">{showDisclaimer ? '↑' : '↓'}</span>
+          </button>
+
+          <div className={`ts-disclaimer__content ${showDisclaimer ? 'ts-disclaimer__content--open' : ''}`}>
+            <p>
+              I am not a professor, a course creator, or a consultant. I am a self-taught engineer who learned
+              everything from free tiers, open-source documentation, and first-principles thinking. This is my
+              working memory — shared openly because I wish someone had shared theirs with me.
+              <br /><br />
+              These are not landmark discoveries. Not breakthroughs. Just honest notes from someone in the
+              trenches. Use them to learn faster than I did.
+            </p>
+          </div>
         </section>
       </main>
     </Layout>
