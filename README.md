@@ -27,6 +27,15 @@
 
 ---
 
+## ⚠️ Disclaimer
+
+*I am not a professor, a course creator, or a consultant. I am a self-taught engineer who learned
+everything from free tiers, open-source documentation, and first-principles thinking. This is my
+working memory — shared openly because I wish someone had shared theirs with me.*
+
+*These are not landmark discoveries. Not breakthroughs. Just honest notes from someone in the
+trenches. Use them to learn faster than I did.*
+
 ## 📖 Overview
 
 This repository houses the source code for my technical engineering documentation, built with [Docusaurus](https://docusaurus.io/). It serves as a unified knowledge base detailing the architectural decisions, constraints, and implementations of my AI Flagship projects.

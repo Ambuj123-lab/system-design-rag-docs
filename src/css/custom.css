@@ -370,3 +370,26 @@
 .ts-logo-link:last-child {
   border-right: none;
 }
+
+/* Disclaimer Block */
+.ts-disclaimer {
+  padding: 4rem 2rem;
+  border-top: 1px solid #27272A;
+  background-color: #000000;
+  text-align: center;
+}
+
+.ts-disclaimer p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #71717A;
+  font-family: var(--ifm-font-family-base);
+}
+
+@media (max-width: 600px) {
+  .ts-disclaimer {
+    padding: 3rem 1.5rem;
+  }
+}
