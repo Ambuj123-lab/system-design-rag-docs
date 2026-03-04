@@ -92,7 +92,7 @@ const config = {
           ],
         },
       ],
-      copyright: `© 2026 Ambuj Kumar Tripathi`,
+      copyright: `© 2026 Ambuj Kumar Tripathi. Built for the open internet. All rights reserved.`,
     },
     prism: {
       theme: themes.vsDark,
