@@ -34,7 +34,7 @@ const config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'AKT · Engineering Docs',
+      title: 'Ambuj Kumar Tripathi',
       items: [
         {
           type: 'docSidebar',
@@ -92,7 +92,7 @@ const config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Ambuj Kumar Tripathi · Personal Engineering Notes · Not for redistribution`,
+      copyright: `© 2026 Ambuj Kumar Tripathi`,
     },
     prism: {
       theme: themes.vsDark,
