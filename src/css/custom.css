@@ -133,8 +133,8 @@
 
 .lp {
   background: #09090B;
-  overflow-x: hidden;
   font-family: 'Inter', system-ui, sans-serif;
+  padding-bottom: 2rem;
 }
 
 /* =========================== */

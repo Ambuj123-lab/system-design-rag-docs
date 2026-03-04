@@ -1,141 +1,85 @@
-# Ambuj Engineering Docs — Setup Guide
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Ambuj123-lab/system-design-rag-docs/main/static/img/favicon.ico" alt="Logo" width="80" height="80">
+  <h1 align="center">Enterprise RAG Architecture & Engineering Docs</h1>
 
-## Ek baar karo, lifetime kaam aayega
-
----
-
-## Step 1 — Node.js install karo (agar nahi hai)
-
-```bash
-node --version  # 18+ chahiye
-```
-
-Nahi hai to: https://nodejs.org → LTS version download karo
-
----
-
-## Step 2 — Ye folder apne machine pe rakho
-
-Is zip ko kisi bhi folder mein extract karo, jaise:
-```
-C:\Users\Ambuj\Documents\ambuj-docs\
-```
+  <p align="center">
+    <strong>Production-tested patterns for LangGraph, Vector Search, and LLMOps on constrained infrastructure.</strong>
+    <br />
+    <br />
+    <a href="https://ambuj-rag-docs.netlify.app/"><strong>Explore the Documentation »</strong></a>
+    <br />
+    <br />
+    <a href="https://ambuj-portfolio-v2.netlify.app/">Portfolio</a>
+    ·
+    <a href="https://github.com/Ambuj123-lab">GitHub Profile</a>
+    ·
+    <a href="https://www.linkedin.com/in/ambuj-tripathi-042b4a118/">LinkedIn</a>
+  </p>
+</div>
 
 ---
 
-## Step 3 — Docusaurus install karo
+## 📖 Overview
 
-```bash
-# Us folder mein jao
-cd ambuj-docs
+This repository houses the source code for my technical engineering documentation, built with [Docusaurus](https://docusaurus.io/). It serves as a unified knowledge base detailing the architectural decisions, constraints, and implementations of my AI Flagship projects.
 
-# Dependencies install karo (sirf ek baar)
-npm install
+The documentation is structured using **Domain-Driven Design (DDD)** concepts, separating infrastructure concerns from application logic. It focuses heavily on the harsh realities of deploying Agentic RAG systems on severely constrained environments (e.g., 512MB RAM standard tier instances).
 
-# Local pe dekhne ke liye
-npm start
-```
+## 🏗️ Domain Layout
 
-Browser mein khul jaayega: **http://localhost:3000**
+The documentation is organized into functional domains:
 
----
+- 📥 **[`domain-ingestion/`](docs/domain-ingestion/intro.md)**: Data pipelines. Parsing PDFs safely, Parent-Child chunking, and handling OOMs via chunked reads and Magic Bytes validation. Includes details on the custom SHA-256 state sync engine.
+- 🔍 **[`domain-retrieval/`](docs/domain-retrieval/intro.md)**: Vector stores and embeddings. Why lightweight embedding models (like Jina AI) are critical for cost-efficiency.
+- 🧠 **[`domain-orchestration/`](docs/domain-orchestration/intro.md)**: Control flow. Deep dives into LangGraph StateGraphs, agent routing, and fallbacks.
+- ⚙️ **[`domain-operations/`](docs/domain-operations/intro.md)**: DevOps & LLMOps. Hard-won limits and optimization strategies for running RAG with absolutely minimal memory footprints.
+- 🚀 **[`domain-applications/`](docs/domain-applications/intro.md)**: The ultimate flagship products this architecture powers (e.g., *Indian Legal AI Expert*, *Citizen Safety AI*).
 
-## Step 4 — GitHub pe daalo
+## 🚀 The Web Application (Docusaurus)
 
-```bash
-git init
-git add .
-git commit -m "Initial docs site"
-```
+This documentation site isn't just a basic template—it's engineered as a premium, high-performance static site.
 
-GitHub pe new repo banao: `ambuj-engineering-docs`
+### 🎨 Premium UI / UX
+- **Vercel/Linear-inspired Design**: Built a completely custom, enterprise-grade landing page replacing the default Docusaurus hero.
+- **Dynamic Animations**: Utilizes CSS-based shimmer effects, mesh-gradient animated backgrounds, and IntersectionObserver-powered scroll reveal animations.
+- **Glassmorphism Components**: Feature cards implement conic-gradient glow hover states.
 
-```bash
-git remote add origin https://github.com/Ambuj123-lab/ambuj-engineering-docs.git
-git push -u origin main
-```
+### 🔒 Enterprise Security Setup
+Deployed on **Netlify**, the site enforces strict HTTP headers via `netlify.toml`:
+*   `Strict-Transport-Security` (HSTS)
+*   `X-Frame-Options: DENY`
+*   `X-XSS-Protection: 1; mode=block`
+*   `Content-Security-Policy (CSP)`
+*   `X-Content-Type-Options: nosniff`
 
----
+## 🛠️ Local Development
 
-## Step 5 — Netlify pe deploy karo (Free)
+If you want to run this documentation site locally:
 
-1. **netlify.com** → Log in → **Add new site** → **Import from Git**
-2. GitHub se `ambuj-engineering-docs` repo select karo
-3. Settings:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `build`
-4. **Deploy site** click karo
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Ambuj123-lab/system-design-rag-docs.git
+   cd system-design-rag-docs
+   ```
 
-5 minute mein live ho jaayegi:
-`https://ambuj-docs.netlify.app` (ya jo bhi naam mile)
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
----
+3. **Start the local development server:**
+   ```bash
+   npm run start
+   ```
+   > The site will run at `http://localhost:3000`.
 
-## Step 6 — Custom domain (Optional)
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-Agar `docs.ambuj-portfolio-v2.netlify.app` chahiye:
-- Netlify dashboard → Domain settings → Add subdomain
+## 👨‍💻 Architect
 
----
+Designed and engineered by **Ambuj Kumar Tripathi**, an AI & Backend Engineer specializing in extracting maximum performance from constrained infrastructure.
 
-## Baad mein content update karna
-
-```bash
-# Koi bhi .md file edit karo
-# Phir:
-git add .
-git commit -m "Update chunking notes"
-git push
-# Netlify automatic deploy kar dega — 2 min mein live
-```
-
----
-
-## Folder Structure
-
-```
-ambuj-docs/
-├── docs/
-│   ├── rag-engineering/      ← RAG Master Guide (7 sections)
-│   │   ├── intro.md
-│   │   ├── document-loaders.md
-│   │   ├── chunking-strategies.md
-│   │   ├── embedding-models.md
-│   │   ├── architecture-decisions.md
-│   │   ├── langgraph-stategraph.md
-│   │   ├── oom-prevention.md
-│   │   └── adaptive-retrieval.md
-│   ├── projects/             ← Project deep dives
-│   │   ├── intro.md
-│   │   ├── indian-legal-ai.md
-│   │   ├── citizen-safety-ai.md
-│   │   └── deployment-lessons.md
-│   └── field-notes/          ← Specific problem deep dives
-│       ├── intro.md
-│       ├── sha256-sync-engine.md
-│       └── 512mb-ram-rag.md
-├── src/css/custom.css        ← Dark theme styling
-├── docusaurus.config.js      ← Site config (update URL here)
-├── sidebars.js               ← Navigation structure
-├── package.json              ← Dependencies
-└── netlify.toml              ← Netlify deployment config
-```
-
----
-
-## Ek cheez zaroor update karo
-
-`docusaurus.config.js` mein line 6:
-```js
-url: 'https://ambuj-docs.netlify.app',  // ← apna actual URL daalo
-```
-
----
-
-## Reddit pe share karna
-
-Doc site live hone ke baad:
-```
-PDF link: https://ambuj-docs.netlify.app/docs/rag-engineering/intro
-```
-Koi block nahi karega — yeh normal website URL hai, PDF nahi.
+*“No theory — only what ships.”*
