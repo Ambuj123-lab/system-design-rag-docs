@@ -38,21 +38,9 @@ const config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'ragSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: '📚 RAG Guide',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'projectsSidebar',
-          position: 'left',
-          label: '🚀 Projects',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'fieldNotesSidebar',
-          position: 'left',
-          label: '📝 Field Notes',
+          label: '📖 Engineering Docs',
         },
         {
           href: 'https://ambuj-portfolio-v2.netlify.app',
@@ -77,22 +65,22 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'RAG Engineering',
+          title: 'Infrastructure Docs',
           items: [
-            { label: 'Document Loaders', to: '/docs/rag-engineering/document-loaders' },
-            { label: 'Chunking Strategies', to: '/docs/rag-engineering/chunking-strategies' },
-            { label: 'Embedding Models', to: '/docs/rag-engineering/embedding-models' },
-            { label: 'LangGraph StateGraph', to: '/docs/rag-engineering/langgraph-stategraph' },
-            { label: 'OOM Prevention', to: '/docs/rag-engineering/oom-prevention' },
-            { label: 'Adaptive Retrieval', to: '/docs/rag-engineering/adaptive-retrieval' },
+            { label: 'Document Loaders', to: '/docs/domain-ingestion/document-loaders' },
+            { label: 'Chunking Strategies', to: '/docs/domain-ingestion/chunking-strategies' },
+            { label: 'Embedding Models', to: '/docs/domain-retrieval/embedding-models' },
+            { label: 'LangGraph StateGraph', to: '/docs/domain-orchestration/langgraph-stategraph' },
+            { label: 'OOM Prevention', to: '/docs/domain-operations/oom-prevention' },
+            { label: 'Adaptive Retrieval', to: '/docs/domain-retrieval/adaptive-retrieval' },
           ],
         },
         {
-          title: 'Projects',
+          title: 'Applications',
           items: [
-            { label: 'Indian Legal AI Expert', to: '/docs/projects/indian-legal-ai' },
-            { label: 'Citizen Safety AI', to: '/docs/projects/citizen-safety-ai' },
-            { label: 'SHA-256 Sync Engine', to: '/docs/field-notes/sha256-sync-engine' },
+            { label: 'Indian Legal AI Expert', to: '/docs/domain-applications/indian-legal-ai' },
+            { label: 'Citizen Safety AI', to: '/docs/domain-applications/citizen-safety-ai' },
+            { label: 'SHA-256 Sync Engine', to: '/docs/domain-ingestion/sha256-sync-engine' },
           ],
         },
         {

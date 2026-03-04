@@ -4,25 +4,25 @@ import Link from '@docusaurus/Link';
 
 const sections = [
   {
-    title: 'RAG Engineering',
+    title: 'Data Ingestion',
     icon: '📚',
-    desc: 'Document loaders, chunking strategies, embedding models, and LangGraph state machines — all production-tested.',
-    link: '/docs/rag-engineering/intro',
-    items: ['Parent-Child Chunking', 'Jina Embeddings', 'LangGraph StateGraph', 'Adaptive Retrieval'],
+    desc: 'Document loaders, chunking strategies, and SHA-256 sync engines — all production-tested.',
+    link: '/docs/domain-ingestion/intro',
+    items: ['Parent-Child Chunking', 'Sync Engine', 'Robust Parsers'],
   },
   {
-    title: 'Production Projects',
+    title: 'Flagship Applications',
     icon: '🚀',
     desc: 'Live AI systems deployed on Docker + Render with OAuth, rate limiting, and observability.',
-    link: '/docs/projects/intro',
-    items: ['Indian Legal AI Expert', 'Citizen Safety AI', 'Deployment Lessons'],
+    link: '/docs/domain-applications/intro',
+    items: ['Indian Legal AI Expert', 'Citizen Safety AI', 'Production UI'],
   },
   {
-    title: 'Field Notes',
+    title: 'Operations & Constraints',
     icon: '📝',
-    desc: 'Hard-won lessons from deploying RAG on 512MB RAM, SHA-256 sync engines, and OOM prevention.',
-    link: '/docs/field-notes/intro',
-    items: ['512MB RAM RAG', 'SHA-256 Sync Engine', 'OOM Prevention'],
+    desc: 'Hard-won lessons from deploying LangGraph on 512MB RAM and avoiding OOM crashes.',
+    link: '/docs/domain-operations/intro',
+    items: ['512MB RAM RAG', 'OOM Prevention', 'Deployment Scars'],
   },
 ];
 
@@ -82,10 +82,10 @@ export default function Home() {
               512 MB RAM. No theory — only what ships.
             </p>
             <div className="lp-hero__cta">
-              <Link className="lp-btn lp-btn--fill" to="/docs/rag-engineering/intro">
+              <Link className="lp-btn lp-btn--fill" to="/docs/domain-ingestion/intro">
                 Read the Guide
               </Link>
-              <Link className="lp-btn lp-btn--ghost" to="/docs/projects/indian-legal-ai">
+              <Link className="lp-btn lp-btn--ghost" to="/docs/domain-applications/indian-legal-ai">
                 View Flagship Project
               </Link>
             </div>
