@@ -29,12 +29,14 @@
 
 ## ⚠️ Disclaimer
 
-*I am not a professor, a course creator, or a consultant. I am a self-taught engineer who learned
+*I am not a professor, a course creator, or a consultant. I am an engineer who learned
 everything from free tiers, open-source documentation, and first-principles thinking. This is my
 working memory — shared openly because I wish someone had shared theirs with me.*
 
 *These are not landmark discoveries. Not breakthroughs. Just honest notes from someone in the
 trenches. Use them to learn faster than I did.*
+
+*— Ambuj Kumar Tripathi, 2026*
 
 ## 📖 Overview
 
