@@ -1,15 +1,23 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Ambuj123-lab/system-design-rag-docs/main/static/img/favicon.ico" alt="Logo" width="80" height="80">
-  <h1 align="center">Enterprise RAG Architecture & Engineering Docs</h1>
+  <img src="https://raw.githubusercontent.com/Ambuj123-lab/system-design-rag-docs/main/static/img/favicon.ico" alt="Logo" width="90" height="90">
+  <h1 align="center">Enterprise RAG & Autonomous Agents</h1>
 
   <p align="center">
     <strong>Production-tested patterns for LangGraph, Vector Search, and LLMOps on constrained infrastructure.</strong>
-    <br />
-    <br />
+  </p>
+  
+  <p align="center">
+    <a href="https://ambuj-rag-docs.netlify.app"><img src="https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Deploy Status"/></a>
+    <a href="https://docusaurus.io"><img src="https://img.shields.io/badge/Docusaurus-v3.7-2E8555?style=for-the-badge&logo=docusaurus&logoColor=white" alt="Docusaurus"/></a>
+    <a href="#"><img src="https://img.shields.io/badge/Architecture-Domain_Driven-FF4F00?style=for-the-badge" alt="Domain Driven Architecture"/></a>
+    <a href="#"><img src="https://img.shields.io/badge/Constraint-512MB_RAM-18181B?style=for-the-badge&logo=linux&logoColor=white" alt="512MB RAM"/></a>
+  </p>
+
+  <p align="center">
     <a href="https://ambuj-rag-docs.netlify.app/"><strong>Explore the Documentation »</strong></a>
     <br />
     <br />
-    <a href="https://ambuj-portfolio-v2.netlify.app/">Portfolio</a>
+    <a href="https://ambuj-portfolio-v2.netlify.app/">Portfolio (Netlify)</a>
     ·
     <a href="https://github.com/Ambuj123-lab">GitHub Profile</a>
     ·

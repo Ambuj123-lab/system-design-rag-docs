@@ -312,28 +312,59 @@
   border-top: 1px solid #27272A;
   background-color: #000000;
   flex-wrap: wrap;
-  /* in case of small screens */
+}
+
+@media (max-width: 600px) {
+  .ts-logos {
+    flex-direction: column;
+  }
 }
 
 .ts-logo-link {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-right: 1px solid #27272A;
+  border-bottom: 2px solid transparent;
   color: #A1A1AA;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-decoration: none !important;
-  transition: all 0.2s;
-  padding: 1rem;
+  transition: all 0.2s ease;
+  padding: 1.5rem 1rem;
+}
+
+@media (max-width: 600px) {
+  .ts-logo-link {
+    border-right: none;
+    border-bottom: 1px solid #27272A;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+
+  .ts-logo-link:last-child {
+    border-bottom: none;
+  }
 }
 
 .ts-logo-link:hover {
-  background: #18181B;
+  background: #09090B;
   color: #FFFFFF;
+  border-bottom-color: #FF4F00;
+}
+
+.ts-logo-link svg {
+  transition: color 0.2s ease;
+}
+
+.ts-logo-link:hover svg {
+  color: #FF4F00;
 }
 
 .ts-logo-link:last-child {
