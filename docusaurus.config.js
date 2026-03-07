@@ -6,7 +6,7 @@ const config = {
   title: 'Ambuj Kumar Tripathi',
   tagline: 'RAG Engineering · LangGraph · LLMOps · Field Notes from Production',
   favicon: 'img/favicon.ico',
-  url: 'https://ambuj-docs.netlify.app',
+  url: 'https://ambuj-rag-docs.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -28,6 +28,7 @@ const config = {
   ],
 
   themeConfig: {
+    image: 'img/playbooks/AKT_Building_RealAI_COMPLETE-Cover.png',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
