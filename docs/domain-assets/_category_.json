@@ -1,0 +1,8 @@
+{
+    "label": "Engineering Playbooks",
+    "position": 5,
+    "link": {
+        "type": "generated-index",
+        "description": "Production engineering playbooks and reference architectures."
+    }
+}
