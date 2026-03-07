@@ -426,120 +426,173 @@
 /*  SEARCH BAR — PREMIUM DARK THEME          */
 /* ========================================= */
 
-/* Search input in navbar */
-[data-theme='dark'] .navbar .DocSearch-Button,
-[data-theme='dark'] .navbar .search-bar-wrap input {
-  background: #09090B;
-  border: 1px solid #27272A;
-  border-radius: 0;
-  color: #FAFAFA;
+/* Override plugin CSS custom properties for dark theme */
+html[data-theme='dark'] {
+  --search-local-modal-background: #000000;
+  --search-local-modal-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), inset 0 0 0 1px #27272A;
+  --search-local-modal-width: 580px;
+  --search-local-hit-background: #09090B;
+  --search-local-hit-shadow: none;
+  --search-local-hit-color: #FAFAFA;
+  --search-local-hit-height: 60px;
+  --search-local-highlight-color: #FF4F00;
+  --search-local-hit-active-color: #FFFFFF;
+  --search-local-muted-color: #71717A;
+  --search-local-spacing: 12px;
+  --search-local-icon-stroke-width: 1.6;
+}
+
+/* Search input field in navbar */
+html[data-theme='dark'] .navbar__search-input {
+  background: #09090B !important;
+  border: 1px solid #27272A !important;
+  border-radius: 0 !important;
+  color: #FAFAFA !important;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.03em;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  height: 36px;
 }
 
-[data-theme='dark'] .navbar .DocSearch-Button:hover,
-[data-theme='dark'] .navbar .search-bar-wrap input:hover {
-  border-color: #FF4F00;
+html[data-theme='dark'] .navbar__search-input:hover {
+  border-color: #FF4F00 !important;
   box-shadow: 0 0 12px rgba(255, 79, 0, 0.15);
 }
 
-[data-theme='dark'] .navbar .DocSearch-Button:focus,
-[data-theme='dark'] .navbar .search-bar-wrap input:focus {
-  border-color: #FF4F00;
-  box-shadow: 0 0 0 2px rgba(255, 79, 0, 0.2);
-  outline: none;
+html[data-theme='dark'] .navbar__search-input:focus {
+  border-color: #FF4F00 !important;
+  box-shadow: 0 0 0 2px rgba(255, 79, 0, 0.25);
+  outline: none !important;
 }
 
-/* Search input placeholder */
-[data-theme='dark'] .navbar .DocSearch-Button-Placeholder,
-[data-theme='dark'] .navbar .search-bar-wrap input::placeholder {
+html[data-theme='dark'] .navbar__search-input::placeholder {
   color: #52525B;
   font-weight: 500;
 }
 
-/* Search icon color */
-[data-theme='dark'] .navbar .DocSearch-Search-Icon,
-[data-theme='dark'] .navbar .search-bar-wrap svg {
-  color: #A1A1AA;
-}
-
-/* Keyboard shortcut badge (Ctrl+K style) */
-[data-theme='dark'] .DocSearch-Button-Keys kbd,
-[data-theme='dark'] .search-bar-wrap .search-bar-shortcut {
+/* Keyboard shortcut badges (Ctrl + K) */
+html[data-theme='dark'] .navbar__search [class*='searchHint'] {
   background: #18181B;
-  border: 1px solid #27272A;
-  border-radius: 0;
+  border: 1px solid #3F3F46 !important;
+  border-radius: 0 !important;
+  box-shadow: inset 0 -1px 0 #3F3F46 !important;
   color: #71717A;
   font-size: 0.7rem;
   font-family: 'JetBrains Mono', monospace;
+  padding: 1px 5px;
 }
 
-/* Search modal / dropdown overlay */
-[data-theme='dark'] .search-result-match,
-[data-theme='dark'] .DocSearch-Modal {
-  background: #000000;
-  border: 1px solid #27272A;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+/* Search dropdown container */
+html[data-theme='dark'] [class*='dropdownMenu'] {
+  background: #000000 !important;
+  border: 1px solid #27272A !important;
+  border-radius: 0 !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9) !important;
+  padding: 8px !important;
 }
 
-/* Search results dropdown container */
-[data-theme='dark'] .search-bar-wrap .search-result-container,
-[data-theme='dark'] .DocSearch-Dropdown {
-  background: #000000;
-  border: 1px solid #27272A;
-  border-radius: 0;
-}
-
-/* Individual search result items */
-[data-theme='dark'] .search-bar-wrap .search-result-item,
-[data-theme='dark'] .DocSearch-Hit {
-  background: #000000;
-  border-bottom: 1px solid #18181B;
-  padding: 12px 16px;
+/* Individual suggestion items */
+html[data-theme='dark'] [class*='suggestion'] {
+  background: #09090B !important;
+  border-radius: 0 !important;
+  border-left: 3px solid transparent;
   transition: all 0.15s ease;
 }
 
-[data-theme='dark'] .search-bar-wrap .search-result-item:hover,
-[data-theme='dark'] .DocSearch-Hit[aria-selected='true'] {
-  background: #09090B;
+html[data-theme='dark'] [class*='suggestion']:hover {
+  background: #18181B !important;
   border-left: 3px solid #FF4F00;
 }
 
-/* Search result title */
-[data-theme='dark'] .search-bar-wrap .search-result-item .search-result-title,
-[data-theme='dark'] .DocSearch-Hit-title {
-  color: #FAFAFA;
-  font-weight: 600;
-  font-size: 0.9rem;
+/* Active/selected suggestion (keyboard navigation) */
+html[data-theme='dark'] [class*='suggestion'][class*='cursor'] {
+  background: #FF4F00 !important;
+  border-left: 3px solid #FF4F00;
 }
 
-/* Search result path / breadcrumb */
-[data-theme='dark'] .search-bar-wrap .search-result-item .search-result-path,
-[data-theme='dark'] .DocSearch-Hit-path {
-  color: #71717A;
-  font-size: 0.75rem;
+/* Hit title */
+html[data-theme='dark'] [class*='hitTitle'] {
+  color: #FAFAFA;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* Hit path (breadcrumb) */
+html[data-theme='dark'] [class*='hitPath'] {
+  color: #71717A !important;
+  font-size: 0.75em;
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Search result content preview */
-[data-theme='dark'] .search-bar-wrap .search-result-item .search-result-content,
-[data-theme='dark'] .DocSearch-Hit-content-wrapper {
-  color: #A1A1AA;
-  font-size: 0.82rem;
-  line-height: 1.5;
+/* Highlighted matching terms in results */
+html[data-theme='dark'] [class*='hitWrapper'] mark {
+  background: none !important;
+  color: #FF4F00 !important;
+  font-weight: 700;
 }
 
-/* Highlighted matching terms in results */
-[data-theme='dark'] .search-bar-wrap .search-result-item mark,
-[data-theme='dark'] .DocSearch-Hit mark,
-[data-theme='dark'] .search-result-match mark {
-  background: rgba(255, 79, 0, 0.2);
+/* Active/selected suggestion mark */
+html[data-theme='dark'] [class*='cursor'] mark {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+}
+
+/* Hit icons and tree connectors */
+html[data-theme='dark'] [class*='hitIcon'],
+html[data-theme='dark'] [class*='hitTree'] {
+  color: #52525B !important;
+}
+
+html[data-theme='dark'] [class*='cursor'] [class*='hitIcon'],
+html[data-theme='dark'] [class*='cursor'] [class*='hitTree'],
+html[data-theme='dark'] [class*='cursor'] [class*='hitPath'] {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Hit action arrow (right side) */
+html[data-theme='dark'] [class*='hitAction'] {
+  color: #52525B;
+}
+
+html[data-theme='dark'] [class*='cursor'] [class*='hitAction'] {
+  color: #FFFFFF;
+}
+
+/* Footer "See all results" link */
+html[data-theme='dark'] [class*='hitFooter'] {
+  border-top: 1px solid #27272A;
+  padding-top: 8px;
+}
+
+html[data-theme='dark'] [class*='hitFooter'] a {
+  color: #FF4F00 !important;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+html[data-theme='dark'] [class*='hitFooter'] a:hover {
+  text-decoration: underline;
+}
+
+/* No results state */
+html[data-theme='dark'] [class*='noResults'] {
+  color: #52525B;
+}
+
+html[data-theme='dark'] [class*='noResultsIcon'] {
+  color: #3F3F46 !important;
+}
+
+/* Search clear button */
+html[data-theme='dark'] [class*='searchClearButton'] {
+  color: #A1A1AA;
+  transition: color 0.15s ease;
+}
+
+html[data-theme='dark'] [class*='searchClearButton']:hover {
   color: #FF4F00;
-  font-weight: 700;
-  padding: 1px 3px;
-  border-radius: 0;
 }
 
 /* Highlighted search terms on TARGET page after clicking */
@@ -547,31 +600,4 @@
   background: rgba(255, 79, 0, 0.15) !important;
   border-bottom: 2px solid #FF4F00 !important;
   padding: 2px 0;
-}
-
-/* "No results" state */
-[data-theme='dark'] .DocSearch-NoResults,
-[data-theme='dark'] .search-bar-wrap .search-no-result {
-  color: #52525B;
-  font-size: 0.85rem;
-  text-align: center;
-  padding: 2rem;
-}
-
-/* Search footer */
-[data-theme='dark'] .DocSearch-Footer {
-  background: #09090B;
-  border-top: 1px solid #27272A;
-}
-
-/* Search close button */
-[data-theme='dark'] .DocSearch-Reset,
-[data-theme='dark'] .search-bar-wrap .search-clear-button {
-  color: #A1A1AA;
-  transition: color 0.15s ease;
-}
-
-[data-theme='dark'] .DocSearch-Reset:hover,
-[data-theme='dark'] .search-bar-wrap .search-clear-button:hover {
-  color: #FF4F00;
 }
