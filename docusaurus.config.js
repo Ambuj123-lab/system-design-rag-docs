@@ -3,7 +3,7 @@ const { themes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ambuj Kumar Tripathi',
+  title: 'AKT Engineering Docs',
   tagline: 'RAG Engineering · LangGraph · LLMOps · Field Notes from Production',
   favicon: 'img/favicon.ico',
   url: 'https://ambuj-rag-docs.netlify.app',
