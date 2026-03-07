@@ -8,6 +8,7 @@ export default function Home() {
     <Layout
       title="Ambuj Kumar Tripathi"
       description="Production RAG Engineering Notes"
+      image="/img/playbooks/AKT_Building_RealAI_COMPLETE-Cover.png"
     >
       <main className="ts-landing">
         <section className="ts-hero">

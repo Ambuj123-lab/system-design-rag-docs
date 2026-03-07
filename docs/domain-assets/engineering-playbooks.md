@@ -2,6 +2,8 @@
 id: engineering-playbooks
 title: 📚 Engineering Playbooks
 sidebar_position: 1
+description: Complete production engineering playbooks containing deep architectural diagrams, constraints handling, and personal engineering notes out of production deployments.
+image: /img/playbooks/AKT_Building_RealAI_COMPLETE-Cover.png
 ---
 
 # 📚 Engineering Playbooks & References
