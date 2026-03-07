@@ -601,3 +601,66 @@ html[data-theme='dark'] [class*='searchClearButton']:hover {
   border-bottom: 2px solid #FF4F00 !important;
   padding: 2px 0;
 }
+
+/* ========================================= */
+/*  SEARCH BAR — RESPONSIVE                  */
+/* ========================================= */
+
+/* Tablet (< 996px) — Docusaurus mobile navbar breakpoint */
+@media (max-width: 996px) {
+  html[data-theme='dark'] [class*='dropdownMenu'] {
+    width: 90vw !important;
+    max-width: 500px;
+    right: -40px !important;
+  }
+}
+
+/* Mobile phones (< 576px) */
+@media (max-width: 576px) {
+
+  /* Collapse search input when not focused */
+  .navbar__search-input:not(:focus) {
+    width: 2rem !important;
+    padding-right: 0.5rem !important;
+    cursor: pointer;
+  }
+
+  /* Expand search input on focus */
+  .navbar__search-input:focus {
+    width: 10rem !important;
+  }
+
+  /* Full width dropdown on mobile */
+  html[data-theme='dark'] [class*='dropdownMenu'] {
+    width: calc(100vw - 24px) !important;
+    max-width: none;
+    right: -12px !important;
+    left: auto !important;
+  }
+
+  /* Ensure results don't overflow */
+  html[data-theme='dark'] [class*='dropdownMenu'] [class*='suggestion'] {
+    font-size: 0.85em;
+  }
+
+  html[data-theme='dark'] [class*='hitTitle'] {
+    font-size: 0.85em !important;
+  }
+
+  html[data-theme='dark'] [class*='hitPath'] {
+    font-size: 0.7em !important;
+  }
+}
+
+/* Very small phones (< 400px) */
+@media (max-width: 400px) {
+  .navbar__search-input:focus {
+    width: 8rem !important;
+  }
+}
+
+/* Ensure results dropdown is scrollable on all devices */
+html[data-theme='dark'] [class*='dropdownMenu'] {
+  max-height: 70vh;
+  overflow-y: auto;
+}
