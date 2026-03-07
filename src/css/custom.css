@@ -401,7 +401,7 @@
 }
 
 .ts-disclaimer__content--open {
-  max-height: 500px;
+  max-height: 1200px;
   opacity: 1;
   margin-top: 2rem;
 }
