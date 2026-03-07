@@ -664,3 +664,44 @@ html[data-theme='dark'] [class*='dropdownMenu'] {
   max-height: 70vh;
   overflow-y: auto;
 }
+
+/* ========================================= */
+/*  CSS ANIMATIONS                           */
+/* ========================================= */
+.shake-disclaimer {
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shake-disclaimer:hover,
+.shake-disclaimer:active,
+.shake-disclaimer:focus {
+  animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  border-color: #FF4F00 !important;
+  background-color: rgba(255, 79, 0, 0.08) !important;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

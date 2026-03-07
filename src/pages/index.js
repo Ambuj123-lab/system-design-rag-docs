@@ -86,16 +86,23 @@ export default function Home() {
           </button>
 
           <div className={`ts-disclaimer__content ${showDisclaimer ? 'ts-disclaimer__content--open' : ''}`}>
-            <p>
-              I am not a professor, a course creator, or a consultant. I am an engineer who learned
-              everything from free tiers, open-source documentation, and first-principles thinking. This is my
-              working memory — shared openly because I wish someone had shared theirs with me.
-              <br /><br />
-              These are not landmark discoveries. Not breakthroughs. Just honest notes from someone in the
-              trenches. Use them to learn faster than I did.
-              <br /><br />
-              <strong>— Ambuj Kumar Tripathi, 2026</strong>
-            </p>
+            <div className="shake-disclaimer" style={{ padding: '1.5rem', backgroundColor: 'rgba(39, 39, 42, 0.4)', border: '1px solid #3F3F46', borderRadius: '8px', color: '#A1A1AA', fontSize: '0.85rem', lineHeight: '1.6', cursor: 'pointer', textAlign: 'left', marginTop: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '16px' }}>
+                <div style={{ fontSize: '1.2rem', flexShrink: 0, color: '#FF4F00' }}>©️</div>
+                <div>
+                  <strong style={{ color: '#FAFAFA', display: 'block', marginBottom: '4px', fontSize: '0.9rem' }}>Copyright & IP Notice</strong>
+                  The architecture, diagrams, and written content provided on this website and in the downloadable playbooks are the original intellectual property of <strong>Ambuj Kumar Tripathi</strong>. You may read, reference, and learn from these materials. However, reproducing, republishing, or claiming this architecture/content as your own work—without explicit written permission and proper attribution—is strictly prohibited.
+                </div>
+              </div>
+              <hr style={{ borderTop: '1px dashed #3F3F46', margin: '16px 0' }} />
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                <div style={{ fontSize: '1.2rem', flexShrink: 0, color: '#FF4F00' }}>⚠️</div>
+                <div>
+                  <strong style={{ color: '#FAFAFA', display: 'block', marginBottom: '4px', fontSize: '0.9rem', color: '#FF4F00' }}>Engineering Portfolio Disclaimer</strong>
+                  I don't claim to be a professor, nor am I pretending to be an 'industry visionary'. These aren't theoretical tutorials or polished bootcamp projects. They are simply my raw, field-tested engineering notes provided "as is" from building production RAG systems under strict constraints (512MB RAM, $0 budget). Use these insights at your own discretion as I do not guarantee their suitability for every production environment.
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
